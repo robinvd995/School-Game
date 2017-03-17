@@ -1,5 +1,6 @@
 package entity;
 
+import game.EnumDirection;
 import game.EnumKeyType;
 import tiles.Tile;
 import world.Room;
@@ -16,16 +17,15 @@ public class Player extends Entity{
 		return currentKey;
 	}
 	
-	public void moveTo(int dx, int dy){
+	public void moveTo(EnumDirection dir){
 		
-		if(dx != 1 || dx != -1 || dy != 1 || dy != -1){
+		if(dir == null)
 			return;
-		}
 		
-		int nx = posX + dx;
-		int ny = posY + dy;
+		int nx = posX + dir.x;
+		int ny = posY + dir.y;
 		
-		Tile tile = theRoom.getTile(posX + dx, posY + dy);
+		Tile tile = theRoom.getTile(posX + dir.x, posY + dir.y);
 		tile.onPlayerWalkTo(this, theRoom, nx, ny);
 		
 		if(tile.canPlayerWalkTo(this)){
