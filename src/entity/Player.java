@@ -2,12 +2,14 @@ package entity;
 
 import game.EnumDirection;
 import game.EnumKeyType;
+import input.Movement;
 import tiles.Tile;
 import world.Room;
 
 public class Player extends Entity{
 
 	private EnumKeyType currentKey = EnumKeyType.NONE;
+	private Movement movement;
 	
 	public Player(Room room) {
 		super(room);
@@ -33,4 +35,19 @@ public class Player extends Entity{
 			posY = ny;
 		}
 	}
+	
+//	public void move(){
+//		if (movement.getArrowKeys().up){
+//			
+//		}
+//		if (movement.getArrowKeys().down){
+//			
+//		}
+//		if (movement.getArrowKeys().left){
+//	
+//		}
+//		if (movement.getArrowKeys().right){
+//	
+//		}		
+//	}
 }
