@@ -2,6 +2,7 @@ package entity;
 
 import game.EnumDirection;
 import game.EnumKeyType;
+import game.KeyGame;
 import input.Movement;
 import tiles.Tile;
 import world.Room;
@@ -36,6 +37,25 @@ public class Player extends Entity{
 		}
 	}
 	
+	public void move(){
+		
+		if (KeyGame.getMovement().up){
+			//code for moving up
+		}
+			
+		if (KeyGame.getMovement().down){
+			//code for moving down
+		}
+			
+		if (KeyGame.getMovement().left){
+			//code for moving left
+		}
+		
+		if (KeyGame.getMovement().right){
+			//code for moving right
+		}	
+	}	
+}	
 //	public void move(){
 //		if (movement.getArrowKeys().up){
 //			
@@ -50,4 +70,4 @@ public class Player extends Entity{
 //	
 //		}		
 //	}
-}
+//}

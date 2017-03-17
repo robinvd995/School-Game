@@ -1,5 +1,6 @@
 package game;
 
+import input.Movement;
 import rendering.Display;
 
 public class KeyGame implements Runnable{
@@ -7,13 +8,14 @@ public class KeyGame implements Runnable{
 	public String title;
 	
 	private Display display;
+	private static Movement movement;
 	
 	public KeyGame(String title, int width, int height){
 		this.title = title;
 		this.width = width;
 		this.height = height;
 		
-		
+		movement = new Movement();		
 	}
 
 	@Override
@@ -23,9 +25,10 @@ public class KeyGame implements Runnable{
 	
 	public void init(){
 		display = new Display(title, width, height);
+		
 	}
 	
-	
-	
-	
+	public static Movement getMovement() {
+		return movement;
+	}	
 }
