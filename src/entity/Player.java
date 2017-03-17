@@ -11,6 +11,7 @@ public class Player extends Entity{
 
 	private EnumKeyType currentKey = EnumKeyType.NONE;
 	private Movement movement;
+	private float xMove, yMove;
 	
 	public Player(Room room) {
 		super(room);
@@ -38,21 +39,23 @@ public class Player extends Entity{
 	}
 	
 	public void move(){
+		xMove = 0;
+		yMove = 0;
 		
 		if (KeyGame.getMovement().up){
-			//code for moving up
+			//yMove -- go up
 		}
 			
 		if (KeyGame.getMovement().down){
-			//code for moving down
+			//yMove ++ go down
 		}
 			
 		if (KeyGame.getMovement().left){
-			//code for moving left
+			//xMove -- go left
 		}
 		
 		if (KeyGame.getMovement().right){
-			//code for moving right
+			//xMove ++ go right
 		}	
 	}	
 }	
