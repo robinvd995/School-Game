@@ -1,7 +1,5 @@
 package game;
 
-import rendering.Display;
-
 public class Launcher {
 	
 	public static void main(String[] args) {

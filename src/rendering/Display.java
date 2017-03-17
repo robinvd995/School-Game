@@ -30,8 +30,7 @@ public class Display {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
-		
+				
 		panel = new JPanel();
 		panel.setPreferredSize(new Dimension(width, height));
 		panel.setMinimumSize(new Dimension(width, height));
