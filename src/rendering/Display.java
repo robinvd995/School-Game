@@ -49,8 +49,5 @@ public class Display {
 		frame.add(panel);
 		frame.pack();
 	}
-	
-	public void centerFrame(JFrame frame, int width, int height){
-		
-	}
+
 }
