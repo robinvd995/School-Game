@@ -1,15 +1,20 @@
 package entity;
 
+import world.Room;
+
 public class Entity {
 
-	private int posX;
-	private int posY;
+	protected Room theRoom;
 	
-	public Entity(){
-		this(0, 0);
+	protected int posX;
+	protected int posY;
+	
+	public Entity(Room room){
+		this(room, 0, 0);
 	}
 	
-	public Entity(int posX, int posY){
+	public Entity(Room room, int posX, int posY){
+		this.theRoom = room;
 		this.posX = posX;
 		this.posY = posY;
 	}

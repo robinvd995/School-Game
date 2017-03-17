@@ -1,10 +1,8 @@
 package rendering;
 
+import java.awt.Dimension;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
-
-import javax.swing.JFrame;
-import java.awt.Dimension;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -48,9 +46,5 @@ public class Display {
 		
 		frame.add(panel);
 		frame.pack();
-	}
-	
-	public void centerFrame(JFrame frame, int width, int height){
-		
 	}
 }
