@@ -25,5 +25,7 @@ public class Tile {
 		return !solid;
 	}
 	
-	public void onPlayerWalkTo(Player player, Room room, int x, int y){}
+	public void beforePlayerWalkTo(Player player, Room room, int x, int y){}
+	
+	public void onPlayerWalkedTo(Player player, Room room, int x, int y){}
 }

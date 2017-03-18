@@ -1,21 +1,22 @@
 package game;
 
-import input.Movement;
+import entity.Player;
+import input.InputManager;
 import rendering.Display;
 
 public class KeyGame implements Runnable{
-	private int width, height;
-	public String title;
 	
 	private Display display;
-	private static Movement movement;
+	//private static Movement movement;
+	
+	private InputManager inputManager;
 	
 	public KeyGame(String title, int width, int height){
-		this.title = title;
-		this.width = width;
-		this.height = height;
+		display = new Display(title, width, height);
 		
-		movement = new Movement();		
+		//movement = new Movement();		
+		
+		inputManager = new InputManager();
 	}
 
 	@Override
@@ -24,11 +25,12 @@ public class KeyGame implements Runnable{
 	}
 	
 	public void init(){
-		display = new Display(title, width, height);
-		
+		display.createDisplay();
+		inputManager.initKeys();
+		display.addKeyListener(inputManager);
 	}
 	
-	public static Movement getMovement() {
+	/*public static Movement getMovement() {
 		return movement;
-	}	
+	}*/	
 }

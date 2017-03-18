@@ -14,7 +14,7 @@ public class TileBarricade extends Tile{
 	}
 	
 	@Override
-	public void onPlayerWalkTo(Player player, Room room, int x, int y){
+	public void beforePlayerWalkTo(Player player, Room room, int x, int y){
 		if(player.getCurrentKey() == correctKeyType){
 			room.setTile(Tile.TILE_NONE, x, y);
 		}

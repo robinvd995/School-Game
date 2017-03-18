@@ -3,6 +3,7 @@ package rendering;
 import java.awt.Dimension;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,14 +15,12 @@ public class Display {
 	
 	private int width;
 	private int height;
-	public String title;
+	private String title;
 	
 	public Display(String title, int width, int height){
 		this.title = title;
 		this.width = width;
 		this.height = height;
-		
-		createDisplay();
 	}
 	
 	public void createDisplay(){
@@ -46,5 +45,9 @@ public class Display {
 		
 		frame.add(panel);
 		frame.pack();
+	}
+	
+	public void addKeyListener(KeyListener listener){
+		frame.addKeyListener(listener);
 	}
 }
