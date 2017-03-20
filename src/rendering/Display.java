@@ -1,10 +1,10 @@
 package rendering;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.event.KeyListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -42,7 +42,7 @@ public class Display {
 		panel.setMinimumSize(new Dimension(width, height));
 		panel.setMinimumSize(new Dimension(width, height));
 		panel.setFocusable(false);
-		
+		panel.setBackground(Color.RED);
 		frame.add(panel);
 		frame.pack();
 	}
@@ -50,4 +50,9 @@ public class Display {
 	public void addKeyListener(KeyListener listener){
 		frame.addKeyListener(listener);
 	}
+	
+	public JPanel getPanel(){
+		return panel;
+	}
+	
 }
