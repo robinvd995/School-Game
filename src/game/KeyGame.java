@@ -29,21 +29,7 @@ public class KeyGame implements Runnable{
 	@Override
 	public void run() {
 		init();
-		
-		while(playing){
-			tick();
-			render();
-		}
-		
-		stop();
-	}
 	
-	private void tick(){
-
-	}
-	
-	private void render(){
-		
 	}
 	
 	public void init(){
@@ -51,28 +37,7 @@ public class KeyGame implements Runnable{
 		inputManager.initKeys();
 		display.addKeyListener(inputManager);
 	}
-	
-	public synchronized void start(){
-		if(playing){
-			return;
-		}
-		playing = true;
-		thread = new Thread(this);
-		thread.start();
-	}
-	
-	public synchronized void stop(){
-		if(!playing){
-			return;
-		}
-		playing = false;
-		try {
-			thread.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-	
+		
 	/*public static Movement getMovement() {
 		return movement;
 	}*/	
